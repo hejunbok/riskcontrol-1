@@ -15,6 +15,14 @@ col_names = dict(
                 loan_time = ['uid','timestamp'] ,
                 browse_history = ["uid","timestamp","pv","BrowseType"],
                 bank_detail = ["uid","timestamp","iTradeType","iCost","IncomeFlag"],
-                bill_detail =["uid","timestamp","bankid","LastBill","LastPayment","creditAmount","CurrentBalance","CurrentleastPayment","TransactionNum","CurrentBill","AdjustAmt","CycleInterest","AvalibeLAmt","PreBorrowAmt" ,"paystatus"] ,
+                bill_detail =["uid","timestamp","bankid","LastBill",
+                            "LastPayment","CreditAmount","CurrentBalance",
+                            "CurrentleastPayment","TransactionNum","CurrentBill",
+                            "AdjustAmt","CycleInterest","AvailableAmt","PreBorrowAmt" ,
+                            "PayStatus"] ,
                 user_info = ["uid","sex","career","education","MaritalStatus","ResidenceType"],
+                )
+
+bank_detail_func = dict(
+                IncomeFlag = lambda x : str(x) == '1' 
                 )
