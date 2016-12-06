@@ -1,4 +1,4 @@
-from code.constants import path_fmt,col_names,bank_detail_func
+from code.constants import path_fmt,col_names
 import pandas as pd
 
 

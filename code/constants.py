@@ -22,7 +22,3 @@ col_names = dict(
                             "PayStatus"] ,
                 user_info = ["uid","sex","career","education","MaritalStatus","ResidenceType"],
                 )
-
-bank_detail_func = dict(
-                IncomeFlag = lambda x : str(x) == '1' 
-                )
