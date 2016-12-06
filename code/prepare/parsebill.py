@@ -6,8 +6,10 @@ from os import path
 table = "bill_detail"
 datatype = 'train'
 
+prepath = path.dirname(__file__)
+input_path = path.join(prepath,path_fmt[table]%(datatype,datatype))
+output_path = path.join(prepath,'../../tmp/bill_detail_clean.csv')
 
-input_path = path.join(path.dirname(__file__),path_fmt[table]%(datatype,datatype))
 df = pd.read_csv(input_path,header = None)
 df.columns = col_names[table]
 
@@ -30,4 +32,5 @@ for uid,group in df_group:
     res_dic[uid] = selectFeature
 print 'need selecting more features'
 res_df = pd.DataFrame(res_dic)
-res_df.to_csv('../../tmp/bill_detail_clean.csv')
+
+res_df.to_csv(output_path)
