@@ -2,7 +2,12 @@
 *.pot
 *.py[co]
 __pycache__
+*.xml
+*.iml
 MANIFEST
+.idea/
+data/
+tmp/
 dist/
 docs/_build/
 docs/locale/
